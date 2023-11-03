@@ -1,0 +1,106 @@
+.modal {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background: rgba(0,0,0,0.6);
+	z-index: 100;
+	top: 0;
+	right:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.modal.open {
+	visibility: visible;
+	opacity: 1;
+}
+
+.modal_window {
+	text-align: center;
+	max-width: 250px;
+	width:100%;
+	padding: 40px;
+	background: white;
+	border-radius: 8px;
+}
+
+.modal_text {
+	margin: 0 10px;
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "Rubik";
+}
+.modal_form {
+	text-align: left;
+	padding-top:30px;
+}
+
+.modal_input {
+	border: none;
+	border-bottom: 2px solid #333333;
+	font-size: 15px;
+	margin-bottom:30px;
+	width:100%;
+}
+
+.modal_input:focus {
+	outline: none;
+}
+
+.modal_check {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.modal_check+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+  }
+
+.modal_check+label::before {
+	content: '';
+	display: inline-block;
+	flex-shrink: 0;
+	flex-grow: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 65% 65%;
+}
+  
+ .modal_check:checked+label::before {
+	background-image: url("../img/vector.png");
+}
+
+.modal_label{
+	font-family:'Rubik';
+}
+
+.model_button {
+	font-size: 14px;
+	border: none;
+	background: #CC221B;
+	color: white;
+	font-weight: bold;
+	padding: 8px 28px;
+	border-radius: 3px;
+	margin-top:140px;
+	text-align:center;
+}
+
+.model_button:hover {
+	background: #CC221B;
+	transition: 0.2s;
+	cursor: pointer;
+}
